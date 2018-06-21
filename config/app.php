@@ -153,6 +153,7 @@ return [
         Laraveldaily\Quickadmin\QuickadminServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         'Laracasts\Utilities\JavaScript\JavaScriptServiceProvider',
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
 
 
         /*
