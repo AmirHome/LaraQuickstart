@@ -13,6 +13,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+
+		\JavaScript::put([
+		    'Author' => 'AmirHome.com'
+		]);
         return view('home');
     }
 }

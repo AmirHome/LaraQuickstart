@@ -1,4 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 @include('admin.partials.header')
+@yield('headExtra')
+</head>
+<body class="page-header-fixed">
+
 @include('admin.partials.topbar')
 <div class="clearfix"></div>
 <div class="page-container">
@@ -34,9 +41,11 @@
      style="display: none;">
     <i class="fa fa-arrow-up"></i>
 </div>
+
+@include('partials.javascriptVariables')
 @include('admin.partials.javascripts')
+@yield('javascriptExtra')
 
-@yield('javascript')
 @include('admin.partials.footer')
-
-
+</body>
+</html>
