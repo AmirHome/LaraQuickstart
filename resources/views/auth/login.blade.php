@@ -4,11 +4,16 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">{{ trans('quickadmin::auth.login-login') }}</div>
+                <div class="panel-heading">{{ __('Login') }}</div>
                 <div class="panel-body">
+
+                    <div class="col-md-offset-3">
+                        <img style="vertical-align:middle" alt="City Map Logo" height="180px" src="{{url('/resources/assets/images/logologin.gif')}}" >
+                        <strong>Panel City Map</strong>
+                    </div>
                     @if (count($errors) > 0)
                         <div class="alert alert-danger">
-                            <strong>{{ trans('quickadmin::auth.whoops') }}</strong> {{ trans('quickadmin::auth.some_problems_with_input') }}
+                            {{ trans('auth.some_problems_with_input') }}
                             <br><br>
                             <ul>
                                 @foreach ($errors->all() as $error)
@@ -27,7 +32,7 @@
                                value="{{ csrf_token() }}">
 
                         <div class="form-group">
-                            <label class="col-md-4 control-label">{{ trans('quickadmin::auth.login-email') }}</label>
+                            <label class="col-md-4 control-label">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
                                 <input type="email"
@@ -38,7 +43,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="col-md-4 control-label">{{ trans('quickadmin::auth.login-password') }}</label>
+                            <label class="col-md-4 control-label">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
                                 <input type="password"
@@ -51,24 +56,29 @@
                             <div class="col-md-6 col-md-offset-4">
                                 <label>
                                     <input type="checkbox"
-                                           name="remember">{{ trans('quickadmin::auth.login-remember_me') }}
-                                </label>
+                                           name="remember">&nbsp;&nbsp;{{ __('Remember Me') }}
+                                </label>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="forget" href="password/reset" >{{ __('Forgot Your Password?') }}</a>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
+                            <div class="col-md-2 col-md-offset-8">
                                 <button type="submit"
-                                        class="btn btn-primary"
+                                        class="btn btn-success"
                                         style="margin-right: 15px;">
-                                    {{ trans('quickadmin::auth.login-btnlogin') }}
+                                    {{ __('Login') }}
                                 </button>
                             </div>
+
                         </div>
                     </form>
                 </div>
+                <div class="panel-footer">
+                <div class= ><div class=row><div class="col-md-6 col-md-offset-3 text-centerx"><small>Copyright © 2018 <a target=_blank href=http://smartme.com.tr>Smartme</a> All rights reserved. </small></div><div class="col-md-3 version"> <span class=inner><small> Version : {{ session('version') }}</small> </span></div></div></div></div>
             </div>
+
         </div>
     </div>
 </div>
+
 @include('admin.partials.footer')

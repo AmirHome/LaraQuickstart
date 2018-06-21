@@ -151,6 +151,11 @@ return [
          * Package Service Providers...
          */
         Laraveldaily\Quickadmin\QuickadminServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
+        'Laracasts\Utilities\JavaScript\JavaScriptServiceProvider',
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+        Felixkiss\UniqueWithValidator\ServiceProvider::class,
+
 
         /*
          * Application Service Providers...
