@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('language/{locale}', function ($locale ='en'){
+	    session()->put('locale', $locale);
+	    return back();
+	});
+
+
+Route::get('/', 'HomeController@index');
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
