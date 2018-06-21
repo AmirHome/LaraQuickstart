@@ -28,6 +28,7 @@
                         <li>barryvdh/laravel-debugbar 3.1</li>
                         <li>Laracasts utilities JavaScript 3.0</li>
                         <li>artesaos/seotools 12.0</li>
+                        <li>felixkiss/uniquewith-validator ^3.1</li>
                     </ul>
                 <p></p>
                 </div>

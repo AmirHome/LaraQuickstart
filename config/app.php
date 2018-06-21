@@ -154,6 +154,7 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
         'Laracasts\Utilities\JavaScript\JavaScriptServiceProvider',
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+        Felixkiss\UniqueWithValidator\ServiceProvider::class,
 
 
         /*
