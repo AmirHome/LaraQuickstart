@@ -27,6 +27,7 @@
                         <li>laraveldaily/quickadmin 4.0</li>
                         <li>barryvdh/laravel-debugbar 3.1</li>
                         <li>Laracasts utilities JavaScript 3.0</li>
+                        <li>artesaos/seotools 12.0</li>
                     </ul>
                 <p></p>
                 </div>
