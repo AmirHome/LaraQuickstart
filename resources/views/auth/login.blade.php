@@ -9,7 +9,7 @@
 
                     <div class="col-md-offset-3">
                         <img style="vertical-align:middle" alt="City Map Logo" height="180px" src="{{url('/resources/assets/images/logologin.gif')}}" >
-                        <strong>Panel City Map</strong>
+                        <strong>{{ config('app.name', 'AmirHome') }}</strong>
                     </div>
                     @if (count($errors) > 0)
                         <div class="alert alert-danger">
