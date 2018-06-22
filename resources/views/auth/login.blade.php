@@ -8,7 +8,7 @@
                 <div class="panel-body">
 
                     <div class="col-md-offset-3">
-                        <img style="vertical-align:middle" alt="City Map Logo" height="180px" src="{{url('/resources/assets/images/logologin.gif')}}" >
+                        <img style="vertical-align:middle" alt="City Map Logo" height="180px" src="{{url('resources/assets')}}/images/logologin.gif" >
                         <strong>{{ config('app.name', 'AmirHome') }}</strong>
                     </div>
                     @if (count($errors) > 0)
@@ -74,7 +74,7 @@
                     </form>
                 </div>
                 <div class="panel-footer">
-                <div class= ><div class=row><div class="col-md-6 col-md-offset-3 text-centerx"><small>Copyright © 2018 <a target=_blank href=http://smartme.com.tr>Smartme</a> All rights reserved. </small></div><div class="col-md-3 version"> <span class=inner><small> Version : {{ session('version') }}</small> </span></div></div></div></div>
+                <div><div class=row><div class="col-md-6 col-md-offset-3 text-centerx"><small>Copyright © 2018 <a target=_blank href=http://smartme.com.tr>Smartme</a> All rights reserved. </small></div><div class="col-md-3 version"> <span class=inner><small> Version : {{ session('version') }}</small> </span></div></div></div></div>
             </div>
 
         </div>

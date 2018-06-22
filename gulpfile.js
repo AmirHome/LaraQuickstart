@@ -1,19 +1,4 @@
 /*
- |--------------------------------------------------------------------------
- | Elixir Asset Management
- |--------------------------------------------------------------------------
- |
- | Elixir provides a clean, fluent API for defining some basic Gulp tasks
- | for your Laravel application. By default, we are compiling the Sass
- | file for our application, as well as publishing vendor resources.
- |
-
-var elixir = require('laravel-elixir');
-elixir(function(mix) {
-    mix.sass('app.scss');
-});
- */
-/*
 $ npm install rimraf -g $ rimraf node_modules
 $ npm install gulp -g
 $ npm init
@@ -229,7 +214,7 @@ gulp.task('ftp-deploy', ['readLastTag'], function() {
 });
 /* clean up css and js and html */
 gulp.task('useref', ['clean'], function() {
-    return gulp.src(paths.assets.view).pipe(replace("{{ url('resources/assets') }}", 'resources/assets')).pipe(useref())
+    return gulp.src(paths.assets.view).pipe(replace("{{url('resources/assets')}}", 'resources/assets')).pipe(useref())
         /* Minifies only if it's a JavaScript file
         <!--build:js(./)  ../assets/js/general-javascript.js -->
             <script src="{{ asset('resources/assets') }}/js/jquery.min.js"></script>
@@ -243,7 +228,7 @@ gulp.task('useref', ['clean'], function() {
             <link rel="stylesheet" href="{{ asset('resources/assets') }}/css/style2.css">
         <!-- endbuild -->
         */
-        .pipe(gulpIf('*.css', cssnano())).pipe(gulp.dest(paths.dev.view)).pipe(replace('resources/assets', "{{ url('resources/assets') }}")).pipe(replace('../assets', "{{ url('resources/assets') }}")).pipe(gulpIf('*.php', htmlmin({
+        .pipe(gulpIf('*.css', cssnano())).pipe(gulp.dest(paths.dev.view)).pipe(replace('resources/assets', "{{url('resources/assets')}}")).pipe(replace('../assets', "{{url('resources/assets')}}")).pipe(gulpIf('*.php', htmlmin({
             collapseWhitespace: true,
             removeAttributeQuotes: true,
             removeComments: true,

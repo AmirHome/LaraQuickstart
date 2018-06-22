@@ -11,6 +11,6 @@
 
 <!-- Styles -->
 {{-- Bootstrap --}}
-<link href="{{ url('resources/assets/css/app.css') }}" rel="stylesheet">
+<link href="{{url('resources/assets')}}/css/app.css" rel="stylesheet">
 {{-- AmirHome.com --}}
-<link href="{{ url('resources/assets/css/amirhome.com.css') }}" rel="stylesheet">
+<link href="{{url('resources/assets')}}/css/amirhome.com.css" rel="stylesheet">
