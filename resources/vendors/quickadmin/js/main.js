@@ -16,9 +16,9 @@ $(document).ready(function () {
         ]
     });
 
-    $('.ckeditor').each(function () {
+/*    $('.ckeditor').each(function () {
         CKEDITOR.replace($(this));
-    })
+    })*/
 
     $('.mass').click(function () {
         if ($(this).is(":checked")) {
