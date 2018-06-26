@@ -8,7 +8,6 @@
 <script src="{{ url('resources/vendors/quickadmin/js') }}/main.js"></script>
 
 <script>
-
     $('.datepicker').datepicker({
         autoclose: true,
         dateFormat: "{{ config('quickadmin.date_format_jquery') }}"
@@ -20,10 +19,9 @@
         timeFormat: "{{ config('quickadmin.time_format_jquery') }}"
     });
 
-    $('#datatable').dataTable( {
+    $('#datatable').dataTable({
         "language": {
             "url": "{{ trans('quickadmin::strings.datatable_url_language') }}"
         }
     });
-
 </script>
